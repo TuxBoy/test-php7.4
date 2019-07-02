@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  devilbox-php-fpm-7-4:
+    image: devilbox/php-fpm-7.4
+    volumes:
+      - ./:/var/www/default/htdocs
+
+  ngnix:
+    image: devilbox/nginx-stable
+    volumes:
+      - ./:/var/www/default/htdocs
+    ports:
+      - '8080:80'
+    environment:
+      PHP_FPM_ENABLE: 1
+      PHP_FPM_SERVER_ADDR: devilbox-php-fpm-7-4
+    links:
+      - devilbox-php-fpm-7-4
