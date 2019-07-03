@@ -12,6 +12,11 @@ Access PHP CLI :
 
 ```bash
 $ docker-compose run --rm php php --version
+
+// Or enter inside php container 
+
+$ make php
+
 ```
 
 See https://github.com/devilbox/docker-php-fpm-7.4 for more details on docker images
