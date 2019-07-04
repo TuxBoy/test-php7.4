@@ -3,3 +3,5 @@ Supprimerait .gitignore
 Supprimerait .idea/inspectionProfiles/
 
 .idea
+
+/vendor/

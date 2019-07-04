@@ -8,3 +8,6 @@ stop:
 
 php: run
 	docker-compose run --rm php bash
+
+composer:
+	docker run --rm --interactive --tty --volume $PWD:/app composer
